@@ -4,7 +4,7 @@
 
 | 分类         | 工具名称                                                       |
 | :------------- | :----------------------------------------------------------: |
-| 深度卸载       | <img src="./Mac工具推荐.assets/image-20220603232201609.png" alt="image-20220603232201609" width="10%" height="10%" />[App Cleaner & Uninstaller](https://nektony.com/mac-app-cleaner) |
+| 深度卸载       | <img src="./Mac工具推荐.assets/image-20220603232201609.png" alt="image-20220603232201609" width="5%" height="5%" />[App Cleaner & Uninstaller](https://nektony.com/mac-app-cleaner) |
 | 优化清理       | <img src="./Mac工具推荐.assets/image-20220603203220415.png" alt="image-20220603203220415" width="10%" height="10%" />[CleanMyMac X](https://cleanmymac.com/)<br /><img src="./Mac工具推荐.assets/image-20220603234342622.png" alt="image-20220603234342622" width="10%" height="10%" />[**腾讯柠檬**](https://lemon.qq.com/) |
 | 视频播放       | <img src="./Mac工具推荐.assets/image-20220604004235153.png" alt="image-20220604004235153" width="10%" height="10%" />[**IINA**](https://www.iina.io/?source=https://macwk.com/soft/iina)<br /><img src="./Mac工具推荐.assets/image-20220604004224994.png" alt="image-20220604004224994" width="10%" height="10%" />[Infuse Pro](https://apps.apple.com/cn/app/id1136220934#?platform=mac)<br /><img src="./Mac工具推荐.assets/image-20220604004105153.png" alt="image-20220604004105153" width="10%" height="10%" />[VLC](http://www.videolan.org/vlc/) |
 | 解压缩         | <img src="./Mac工具推荐.assets/image-20220604011419000.png" alt="image-20220604011419000" width="10%" height="10%" />[**Keka**](https://www.keka.io/zh-cn/)<br /><img src="./Mac工具推荐.assets/image-20220603234619769.png" alt="image-20220603234619769" width="10%" height="10%" />[MacZip](https://ezip.awehunt.com/) |
