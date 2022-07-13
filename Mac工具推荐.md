@@ -20,7 +20,7 @@
 | 截图/长截图 | <img src="./Mac工具推荐.assets/image-20220604010423409.png" alt="image-20220604010423409" width="5%" height="5%" />[**iShot**](https://apps.apple.com/cn/app/id1485844094)    <img src="./Mac工具推荐.assets/image-20220604010409832.png" alt="image-20220604010409832" width="5%" height="5%" />[Xnip](https://apps.apple.com/cn/app/xnip/id1221250572) |
 | 顶层窗口高亮   | <img src="./Mac工具推荐.assets/image-20220604005559151.png" alt="image-20220604005559151" width="5%" height="5%" />[HazeOver](https://apps.apple.com/cn/app/id430798174) |
 | 壁纸           | <img src="./Mac工具推荐.assets/image-20220604005432924.png" alt="image-20220604005432924" width="5%" height="5%" />[pap.er](http://paper.meiyuan.in/) |
-| 右键菜单       | 超级右键                                                     |
+| 右键菜单       | <img src="./Mac工具推荐.assets/image-20220713104010325.png" alt="image-20220713104010325" width="5%" height="5%" /> [超级右键](https://apps.apple.com/cn/app/%E8%B6%85%E7%BA%A7%E5%8F%B3%E9%94%AE-irightmouse/id1497428978?mt=12) |
 | OCR工具        | <img src="./Mac工具推荐.assets/image-20220604013236821.png" alt="image-20220604013236821" width="5%" height="5%" />[Text Scanner](https://apps.apple.com/cn/app/id1452523807) |
 | 系统监控 | <img src="./Mac工具推荐.assets/image-20220603233431817.png" alt="image-20220603233431817" width="5%" height="5%" />[iStat Menus](https://bjango.com/mac/istatmenus/) |
 | 虚拟机         | <img src="./Mac工具推荐.assets/image-20220603232623229.png" alt="image-20220603232623229" width="5%" height="5%" />[Parallels Desktop](https://www.parallels.com/cn/products/desktop/pro/) |
