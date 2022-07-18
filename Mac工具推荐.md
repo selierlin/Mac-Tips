@@ -58,4 +58,5 @@
 | 微信多开/防撤回 | <img src="./Mac工具推荐.assets/image-20220604105942636.png" alt="image-20220604105942636" width="5%" height="5%" />[WeChatTweak](https://github.com/Sunnyyoung/WeChatTweak-macOS) |
 | 双向同步 | <img src="./Mac工具推荐.assets/image-20220604112020806.png" alt="image-20220604112020806" width="5%" height="5%" />[Mackup](https://github.com/lra/mackup) |
 | 全局代理 | <img src="./Mac工具推荐.assets/image-20220619184245824.png" alt="image-20220619184245824" width="5%" height="5%" />[Proxifier](https://www.proxifier.com/) |
+| 白噪音 | <img src="./Mac工具推荐.assets/image-20220718143333552.png" alt="image-20220718143333552" width="5%" height="5%" />[Noizio](https://apps.apple.com/cn/app/id928871589?mt=12) |
 
