@@ -135,7 +135,7 @@ p.p.s. Get stickers and t-shirts at http://shop.planetargon.com.
 
 ```zsh
 alias atom='/Applications/Atom.app/Contents/MacOS/Atom'
-alias subl='/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin//subl'
 alias code='/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code'
 
 ```
