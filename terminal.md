@@ -124,3 +124,52 @@ p.p.s. Get stickers and t-shirts at http://shop.planetargon.com.
 更新完配置即可生效，不想更新配置的话，新开一个终端同样可以生效。
 
 正所谓风雨之后见彩虹，经过这一番捣鼓，电脑用起来更加顺手了，可以愉快的开发了。
+
+### 配置别名
+
+当我们需要使用终端打开某个命令的时候，可能需要很长一段路径，这个时候我们可以设置别名来代替这一大段
+
+如：
+
+```zsh
+alias atom='/Applications/Atom.app/Contents/MacOS/Atom'
+alias subl='/Applications/SublimeText.app/Contents/SharedSupport/bin/subl'
+alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
+
+```
+
+> 以上atom、subl、code表示在你安装了对应软件(Atom、Sublimt、Visual Code)的前提下，可以在终端对其打开
+
+### 配置代理
+
+Mac原生的配置代理命令是：
+
+```shell
+export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
+```
+
+但是在 zsh 中是不适用的，需要修改 .zshrc 文件实现
+
+1. 编辑 `vim ~/.zshrc`
+
+2. 在配置文件中添加下面一段
+
+```zsh
+# where proxy
+proxy () {
+  export http_proxy="http://127.0.0.1:8087"
+  export https_proxy="http://127.0.0.1:8087"
+  echo "HTTP Proxy on"
+}
+
+# where noproxy
+noproxy () {
+  unset http_proxy
+  unset https_proxy
+  echo "HTTP Proxy off"
+}
+```
+保存退出
+
+3. 以后使用代理时，在终端任何地方输入：`proxy`  就可以了，如果不需要的话： `noproxy`
+
