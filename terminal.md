@@ -157,8 +157,8 @@ export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_pr
 ```zsh
 # where proxy
 proxy () {
-  export http_proxy="http://127.0.0.1:8087"
-  export https_proxy="http://127.0.0.1:8087"
+  export http_proxy="http://127.0.0.1:7890"
+  export https_proxy="http://127.0.0.1:7890"
   echo "HTTP Proxy on"
 }
 
