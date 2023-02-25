@@ -8,3 +8,5 @@
 [Mac工具推荐](Mac工具推荐.md)
 
 [Mac使用技巧](Mac使用技巧.md)
+
+[Mac终端配置](terminal.md)
