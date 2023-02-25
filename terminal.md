@@ -177,3 +177,16 @@ noproxy () {
 
 3. 以后使用代理时，在终端任何地方输入：`proxy`  就可以了，如果不需要的话： `noproxy`
 
+
+#### 终端问题
+
+如果出现：
+MacOS Monterey 12.3 系统更新了自带的python问题
+在终端中运行cd命令会出现。`env: python: No such file or directory`
+
+
+```zsh
+ln -s /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/bin/python3 /usr/local/bin/python
+```
+
+然后在 .bash_profile 中 增加: `export PATH=/usr/local/bin:$PATH`
