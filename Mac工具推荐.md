@@ -11,6 +11,7 @@
 | 深度卸载       | <img src="./Mac工具推荐.assets/image-20220603232201609.png" alt="image-20220603232201609" width="5%" height="5%" />[App Cleaner & Uninstaller](https://nektony.com/mac-app-cleaner) |
 | 截图/贴图    | <img src="./Mac工具推荐.assets/image-20220603234302558.png" alt="image-20220603234302558" width="5%" height="5%" />[Snipaste](https://zh.snipaste.com/) |
 | 剪贴板历史     | <img src="./Mac工具推荐.assets/image-20220604011829713.png" alt="image-20220604011829713" width="5%" height="5%" />[Paste](https://apps.apple.com/cn/app/id967805235) |
+| 容器 | <img src="./Mac工具推荐.assets/image-1678671530005.jpg" alt="image-20220603234302558" width="5%" height="5%" />[Docker](https://docs.docker.com/desktop/install/mac-install/) |
 | 鼠标平滑滚动 | <img src="./Mac工具推荐.assets/image-20220604085516767.png" alt="image-20220604085516767" width="5%" height="5%" />[Mos](https://mos.caldis.me/) |
 | 包管理器 | <img src="https://brew.sh/assets/img/homebrew-256x256.png" alt="Homebrew logo" width="5%" height="5%" />[Homebrew](https://brew.sh/index_zh-cn) |
 | shell工具 | <img src="https://ohmyz.sh/img/OMZLogo_BnW.png" alt="Oh My ZSH logo!" width="5%" height="5%" />[Zsh](https://ohmyz.sh/) |
