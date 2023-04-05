@@ -34,7 +34,7 @@
 | 壁纸           | <img src="./Mac工具推荐.assets/image-20220604005432924.png" alt="image-20220604005432924" width="5%" height="5%" />[pap.er](http://paper.meiyuan.in/) |
 | 文件临时存放   | <img src="./Mac工具推荐.assets/image-20220604010525830.png" alt="image-20220604010525830" width="5%" height="5%" />[Yoink](https://apps.apple.com/cn/app/yoink/id457622435?mt=12) |
 | 右键菜单       | <img src="./Mac工具推荐.assets/image-20220713104010325.png" alt="image-20220713104010325" width="5%" height="5%" /> [超级右键](https://apps.apple.com/cn/app/%E8%B6%85%E7%BA%A7%E5%8F%B3%E9%94%AE-irightmouse/id1497428978?mt=12) |
-| OCR工具        | <img src="./Mac工具推荐.assets/image-20220604013236821.png" alt="image-20220604013236821" width="5%" height="5%" />[Text Scanner](https://apps.apple.com/cn/app/id1452523807) |
+| OCR工具        | <img src="./Mac工具推荐.assets/1680681110203-0681219.jpg" alt="0681219" width="5%" height="5%" />[bob](https://bobtranslate.com/) |
 | 顶层窗口高亮   | <img src="./Mac工具推荐.assets/image-20220604005559151.png" alt="image-20220604005559151" width="5%" height="5%" />[HazeOver](https://apps.apple.com/cn/app/id430798174) |
 | 系统监控 | <img src="./Mac工具推荐.assets/image-20220603233431817.png" alt="image-20220603233431817" width="5%" height="5%" />[iStat Menus](https://bjango.com/mac/istatmenus/) |
 | 广告屏蔽       | <img src="./Mac工具推荐.assets/image-20220604004747100.png" alt="image-20220604004747100" width="5%" height="5%" />[Adguard](https://adguard.com/zh_cn/welcome.html) |
