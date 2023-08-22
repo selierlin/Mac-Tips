@@ -184,8 +184,11 @@ noproxy () {
 MacOS Monterey 12.3 系统更新了自带的python问题
 在终端中运行cd命令会出现。`env: python: No such file or directory`
 
+```sh
+ln -s 你的python3安装路径 /usr/local/bin/python
+```
 
-```zsh
+```sh
 ln -s /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/bin/python3 /usr/local/bin/python
 ```
 
