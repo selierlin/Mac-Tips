@@ -173,6 +173,32 @@
 1. 命令写多的时候，可以使用 `⌃w` 删除，`⌃u` 可以删除前面面所有的字符，`⌃k` 可以删除后面所有的字符
 2. `⌥←` 可以向左调词，右同理。
 
+#### 启动台图标大小
+
+- 打开终端，复制并执行以下4行命令：
+```shell
+defaults write com.apple.dock springboard-rows -int 6
+defaults write com.apple.dock springboard-columns -int 9
+defaults write com.apple.dock ResetLaunchPad -bool TRUE
+killall Dock
+```
+
+以上每行的含义：
+1. 调整多少行显示图标数量，这里我用的是6，数字部分你也可以改成8或其他
+2. 调整每一列显示图标数量，9表示每一列显示9个，数字部分可根据个人喜好进行设置。
+3. 重置Launchpad
+4. 重启Dock
+
+- 还原
+```shell
+defaults write com.apple.dock springboard-rows Default
+defaults write com.apple.dock springboard-columns Default
+defaults write com.apple.dock ResetLaunchPad -bool TRUE
+killall Dock
+```
+
+
+
 #### 其他
 
 - 无法保证每次操作都是隐藏程序点击叉叉来关闭窗口，有时是隐藏，有时关闭窗口的程序 。区分哪些是隐藏哪些是正常状态。终端输入命令可以区分 如下：
@@ -183,5 +209,5 @@
 - 修改视频缩略图：截屏补抓窗口（按 `⌥` 取消阴影），打开视频的显示简介，将图片直接拖拽到简介中视频图标的位置。如果需要还原图标，选中简介中的图标按下 `Delete` 即可。也可应用于复制App图标，打开对应程序的简介，选中图标，按下 `⌘C` 拷贝，在其他地方即可粘贴图片
 - 使用自带的中文输入法时, 在打字的时候, 按下 `↹` 可以出现音标, 如: ní hǎo
 - 使用英文输入法时, 在打字的时候, 按住 `a` 可以出现不同符号, 如: àááäæãåā。其他字母同理
-- 为任意应用设置快捷键：`系统设置`->`键盘`->`键盘快捷键`->`App快捷键`->`➕`->`选择指定应用`。菜单标题：你需要修改的功能对应的菜单名称
+- 为任意应用设置快捷键：`系统设置`->`键盘`->`键盘快捷键`->`App快捷键`->`➕`->`选择指定应用`。菜单标题：你需要修改的功能对应的菜单名称，注意一定要对应菜单的名称！
 
