@@ -6,11 +6,11 @@
 
 # 配置
 首先设置 iTerm2 为默认终端  
-![](assets/Pasted image 20250203225402.png)
+![](assets/Pasted%20image%2020250203225402.png)
 # 将默认 Shell 换为 zsh
 
 先查询系统中所有的 shell：`cat /etc/shells`  
-![](assets/Pasted image 20250203225442.png)
+![](assets/Pasted%20image%2020250203225442.png)
 一般而言 Mac 的 Terminal 用的 Shell 是 bash，现在将其换成 zsh：`chsh -s /bin/zsh`
 
 # 安装并配置 oh-my-zsh
