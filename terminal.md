@@ -16,19 +16,18 @@
 
 * 将主题设置为默认主题Shell -> Use Settings as Default
 
-
 ## 使用oh-my-zsh
 
 > oh-my-zsh 是一个基于 zsh shell 的扩展框架，提供了许多实用的功能和主题，使得使用 zsh shell 更加方便和舒适。它是由社区驱动的开源项目，提供了大量的插件和主题，可以帮助用户定制他们的 shell 界面，并提供更好的命令行体验。
 
 
-1. 安装 [HomeBrew](https://brew.sh/) 
+3. 安装 [HomeBrew](https://brew.sh/) 
 
 > 作为 macOS 必备的包管理工具，相信大家肯定已经很熟悉了，没安装的朋友可以执行下面命令装一下，安装过的可以执行下面命令可以进行更新。
 
 打开终端，执行命令：`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
-2. 更新zsh、git
+4. 更新zsh、git
 
 macOS 一般会自带 zsh，不过版本会比较早，我们先更新一下，以便使用最新特性。
 
@@ -41,7 +40,7 @@ brew install zsh
 /usr/local/Cellar/zsh/5.7.1: 1,515 files, 13.3MB
 ```
 
-3. 切换至 zsh
+5. 切换至 zsh
 
 查看当前使用的 shell
 
@@ -68,7 +67,7 @@ cat /etc/shells
 
 重启终端即可使用 zsh。
 
-4. 安装 [oh-my-zsh](https://ohmyz.sh/)
+6. 安装 [oh-my-zsh](https://ohmyz.sh/)
 
 `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
@@ -152,9 +151,9 @@ export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_pr
 
 但是在 zsh 中是不适用的，需要修改 .zshrc 文件实现
 
-1. 编辑 `vim ~/.zshrc`
+7. 编辑 `vim ~/.zshrc`
 
-2. 在配置文件中添加下面一段
+8. 在配置文件中添加下面一段
 
 ```zsh
 # where proxy
@@ -175,7 +174,7 @@ noproxy () {
 
 **更新配置**: `source ~/.zshrc` , 每次修改配置都需要执行
 
-3. 以后使用代理时，在终端任何地方输入：`proxy`  就可以了，如果不需要的话： `noproxy`
+9. 以后使用代理时，在终端任何地方输入：`proxy`  就可以了，如果不需要的话： `noproxy`
 
 
 ### 终端问题

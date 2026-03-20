@@ -8,8 +8,22 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel9k/powerlevel9k"
+
+# POWERLEVEL9K 配置
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="↳ "
+
+# P9k 使用的模式
+POWERLEVEL9K_MODE='nerdfont-complete'
+# 显示在左边的提示元素（分段位于括号中并以空格隔开）
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir dir_writable vcs)
+# 显示在右边的提示元素（分段）
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time)
+# 左侧提示符是否显示两行（光标显示在下一行）
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -103,7 +117,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-
 # where proxy
 proxy () {
   export http_proxy="http://127.0.0.1:7890"
@@ -118,6 +131,16 @@ noproxy () {
   echo "HTTP Proxy off"
 }
 
+# 使用 lsd 配置
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+
+# 指定别名
+alias icloud='~/Library/Mobile\ Documents/'
+alias idea='/Users/selier/Applications/IntelliJ\ IDEA\ Ultimate.app/Contents/MacOS/idea'
 alias atom='/Applications/Atom.app/Contents/MacOS/Atom'
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin//subl'
 alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
@@ -126,7 +149,22 @@ alias python=python3
 alias ll='ls -ahlF'
 alias rm='trash'
 
+# 配置 ls 颜色
+# export CLICOLOR=1
+# export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
+source ~/Project/LS_COLORS/lscolors.sh
 
+# 安装 trash
+export PATH="/opt/homebrew/opt/trash/bin:$PATH"
+
+# 安装 thefuck
+eval $(thefuck --alias)
+
+PATH="$PATH":/usr/local/bin
+PATH="$PATH":/usr/local/opt/python@3.11/libexec/bin
+export PATH=$PATH
+
+# 配置 nvm
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
