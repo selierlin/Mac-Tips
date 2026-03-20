@@ -50,7 +50,7 @@ brew install font-ubuntu-mono-nerd-font
 
 
 打开 iTerm2 设置，`Profiles -> Text -> Font`，选择 `UbuntuMono Nerd Font Mono`，勾选 `Use a different font for non-ASClI text`，字体选 `Hack Nerd Font`，`Regular`字号看自己情况，我这里选的是 20。  
-![](assets/Pasted image 20250203230112.png)
+![](assets/Pasted%20image 20250203230112.png)
 
 
 ## 安装 powerlevel9k 主题
@@ -62,7 +62,7 @@ git clone https://github.com/Powerlevel9k/powerlevel9k ${ZSH_CUSTOM:-~/.oh-my-zs
 ```
 
 最后文件列表如下：
-![](assets/Pasted image 20250203231603.png)
+![](assets/Pasted%20image 20250203231603.png)
 
 根据步骤：主题修改为：`ZSH_THEME="powerlevel9k/powerlevel9k"` ，source 一下zsh 配置文件即可
 
@@ -72,7 +72,7 @@ git clone https://github.com/Powerlevel9k/powerlevel9k ${ZSH_CUSTOM:-~/.oh-my-zs
 [下载 Solarized](https://ethanschoonover.com/solarized/)，解压。
 
 还是在 iTerm2 的设置里，`Profiles -> Colors -> Color Presets... -> Import`  
-![](assets/Pasted image 20250203230351.png)
+![](assets/Pasted%20image 20250203230351.png)
 
 导入之前解压好的文件夹中的 `Solarized Dark.itermcolors` 文件，导入完成后并不会自动更换，需要手动选择更换。
 
@@ -160,7 +160,7 @@ export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30
 
 LS_COLORS 包含有对不同颜色的配置，效果如下图所示
 
-![](assets/Pasted image 20250204211721.png)
+![](assets/Pasted%20image 20250204211721.png)
 
 下载项目
 `git clone https://github.com/trapd00r/LS_COLORS ~/Project/LS_COLORS/`
@@ -175,15 +175,15 @@ source ~/Project/LS_COLORS/lscolors.sh
 # 调整 iTerm2 及 Status Bar 设置
 
 打开 iTerm2 设置，`Profiles -> Session -> Miscellaneous`，勾选底部的 `Status bar enabled`。  
-![](assets/Pasted image 20250203230840.png)
+![](assets/Pasted%20image 20250203230840.png)
 点击旁边的 Configure Status Bar  
-![](assets/Pasted image 20250203230907.png)
+![](assets/Pasted%20image 20250203230907.png)
 选择你想要添加的 Component，然后把底部的 `🌈Auto-Rainbow` 选项设为自动。
 
 接下来进入 Appearance 选项卡，在 General 中将 Theme 修改为 Minimal 以实现顶栏沉浸的效果，再将 Status bar location 选择为 Bottom，让其在底部显示。  
-![](assets/Pasted image 20250203230936.png)
+![](assets/Pasted%20image 20250203230936.png)
 可能还有写朋友记得我之前提到过自动命令提示有些问题，这里有一个小坑，即自动弹出的提示颜色和背景颜色完全一致，导致根本看不见命令提示，知道了问题所在解决起来就很简单了，直接在 `Profiles -> Color -> ANSI Colors` 中修改 Black 行 Bright 列的颜色即可。  
-![](assets/Pasted image 20250203231015.png)
+![](assets/Pasted%20image 20250203231015.png)
 但是——这里要说但是——请注意，Vim 的配色也是与之有关的，结果便是如果修改的颜色过于明亮就会导致在 Vim 中看不清字，这里我的解决方法比较简单粗暴，找了一个既能看得清也不至于遮挡字的颜色，我用的是 `304243`
 
 到此为止所有的配置就结束了，有些配置可能需要重启 iTerm 才能生效，无论如何，enjoy it!
@@ -191,10 +191,10 @@ source ~/Project/LS_COLORS/lscolors.sh
 # 增加终端快捷键
 路径：`Setting -> Profiles -> Keys -> Key Mappings`
 
-![](assets/Pasted image 20250204144235.png)
+![](assets/Pasted%20image 20250204144235.png)
 
 点击 "+"按钮添加一个新的按键映射，或者双击现有的按键映射来编辑它。对于 "跳到单词开头 "命令，选择 "发送转义序列 "动作并发送转义序列`Esc+b` 。
-![](assets/Pasted image 20250204144357.png)
+![](assets/Pasted%20image 20250204144357.png)
 
 现在，每当你在iTerm2中输入一个命令时，真的很容易跳回到单词（甚至是多个单词）的开头，以插入更多的文字或删除命令的一部分--不再需要反复按←键来逐字导航。
 
