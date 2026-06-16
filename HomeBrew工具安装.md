@@ -147,25 +147,47 @@ $(brew --prefix)/opt/fzf/install
 
 ### gh
 
-```bash
-# 登录 GitHub 账户
-gh auth login
+```bash title=gh 常用命令
+gh auth login                       # 登录 GitHub 账户
 
-# 常用命令
-gh pr create        # 创建 PR
-gh pr checkout 123  # 切换到 PR 分支
-gh pr list          # 列出 PR
-gh issue list       # 列出 Issue
-gh repo clone owner/repo  # 克隆仓库
+# Pull Request
+gh pr create                        # 创建 PR
+gh pr checkout 123                  # 切换到 PR 分支
+gh pr list                          # 列出 PR
+gh pr merge 123 --squash --delete-branch  # 合并并删分支
+gh pr view --web                    # 浏览器打开当前 PR
+
+# Issue / Release / Actions / Gist
+gh issue create
+gh release create v1.0              # 创建发布
+gh run list                         # 查看 Actions 运行
+gh run watch                        # 实时跟踪某次运行
+gh gist create file.txt --public    # 创建 Gist
+
+# 仓库
+gh repo clone owner/repo
+gh repo create my-proj --public --source=. --push  # 本地项目一键建仓并推送
 ```
 
 ### nvm
 
-```bash
+```bash title=~/.zshrc - nvm 集成
 # 添加到 ~/.zshrc
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
 ```
+
+```bash title=nvm 版本管理
+nvm install 20            # 安装 Node 20
+nvm install --lts         # 安装最新 LTS
+nvm use 20                # 当前 shell 切版本
+nvm ls                    # 列出已装版本
+nvm ls-remote --lts       # 列出远程可装的 LTS
+nvm alias default 20      # 设默认版本（新终端生效）
+nvm uninstall 18          # 卸载某版本
+```
+
+> 项目根目录放 `.nvmrc`（内容如 `20`），进目录 `nvm use` 自动按文件切版本。
 
 ### thefuck
 
@@ -183,10 +205,17 @@ chsh -s $(which zsh)
 
 ### starship
 
-```bash
+```bash title=~/.zshrc - starship 集成
 # 添加到 ~/.zshrc
 eval "$(starship init zsh)"
 ```
+
+```bash title=starship 配置
+starship preset --list                                          # 列出内置预设
+starship preset nerd-font-symbols > ~/.config/starship.toml     # 导出预设为配置
+```
+
+> 提示符样式在 `~/.config/starship.toml`（我的已有自定义）。
 
 ### zoxide
 
@@ -194,6 +223,8 @@ eval "$(starship init zsh)"
 # 添加到 ~/.zshrc
 eval "$(zoxide init zsh)"
 ```
+
+> 详见 [[zoxide 智能跳转]]。
 
 ### direnv
 
@@ -214,6 +245,26 @@ direnv allow
 # 添加到 ~/.zshrc
 export LS_COLORS="$(vivid generate molokai)"
 ```
+
+> 搭配 eza 用效果翻倍，详见 [[eza 与 vivid]]。
+
+### stow
+
+GNU Stow 用**符号链接**管理 dotfiles：配置集中放一个仓库，stow 自动在 `$HOME` 建软链，增删某个工具的配置互不影响。
+
+```bash title=stow dotfiles 工作流
+# 假设仓库结构 ~/dotfiles/zellij/.config/zellij/config.kdl
+cd ~/dotfiles
+stow zellij          # 链接 zellij 配置到 ~/.config/zellij
+stow nvim            # 链接 neovim 配置
+stow starship
+
+stow -D zellij       # 撤销（删除软链，不删源文件）
+stow -R zellij       # 重新链接（目录结构调整后）
+stow --adopt zellij  # 把 $HOME 已存在的真实文件收编进仓库
+```
+
+> 进入仓库目录执行 stow，它按「包名/子目录」结构向 `$HOME` 建镜像软链。zellij、starship、nvim 的配置都这么管理。
 
 ---
 

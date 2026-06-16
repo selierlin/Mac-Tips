@@ -17,11 +17,46 @@ bat --theme=GitHub src/main.js   # 指定显示主题
 bat --line-range 10:20 file.py   # 仅显示 10 到 20 行的内容
 ```
 
+```bash title=bat 主题与缓存
+bat --list-themes                # 列出所有内置主题
+bat cache --build                # 重建缓存（换主题 / 加语法后执行）
+bat --paging=never file          # 不分页直接输出（适合管道）
+```
+
+```bash title=让 man / git 也带高亮（加到 ~/.zshrc）
+# man 页用 bat 高亮
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT="-c"
+# git diff / log 用 bat
+git config --global core.pager 'bat --paging=always'
+```
+
+> 持久设置（主题、样式）写进 `~/.config/bat/config`，如 `--theme="GitHub"`、`--style="numbers,changes"`。
+
 ### mole — 极简垃圾清理工具
 
 **安装：** `brew install tw93/tap/mole`
 
 **使用：** 在终端直接输入 `mo` 即可唤起交互式清理界面。
+
+## 压缩与解压
+
+### xz — 高压缩比压缩工具
+
+macOS 自带 xz（XZ Utils 5.8.3），常配合 tar 处理 `.tar.xz`。
+
+```bash title=xz / tar.xz 速查
+xz file.log              # 压缩为 file.log.xz（默认删原文件）
+xz -k file.log           # 保留原文件
+xz -d file.log.xz        # 解压 .xz
+xz -l file.log.xz        # 查看压缩信息（不解压）
+
+# .tar.xz 归档（最常用）
+tar -cJf archive.tar.xz dir/    # 打包并用 xz 压缩
+tar -xJf archive.tar.xz         # 解包 .tar.xz
+```
+
+> tar 压缩标志：`-J` = xz（.tar.xz）、`-z` = gzip（.tar.gz）、`-j` = bzip2（.tar.bz2）。
 
 ## 高频实用工具榜单
 

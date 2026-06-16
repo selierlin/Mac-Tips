@@ -14,6 +14,7 @@
 
 - [终端环境搭建](终端环境搭建.md) — zsh / oh-my-zsh / iTerm2 / 字体 / 配色 一条龙
 - [tmux 终极指南](tmux%20终极指南.md) — 终端复用神器
+- [zellij 终端复用](zellij%20终端复用.md) — 现代终端复用器（tmux 替代）
 
 ## CLI 工具
 
@@ -21,9 +22,17 @@
 - [atuin 历史搜索](atuin%20历史搜索.md) — shell 历史记录管理
 - [ripgrep 与 fd](ripgrep%20与%20fd.md) — 内容搜索 / 文件名查找
 - [eza 与 vivid](eza%20与%20vivid.md) — 现代 ls 与配色
-- [CLI 工具速查](CLI工具速查.md) — bat / thefuck / tldr / trash 等
+- [zoxide 智能跳转](zoxide%20智能跳转.md) — frecency 目录跳转
+- [CLI 工具速查](CLI工具速查.md) — bat / thefuck / tldr / trash / xz 等
 - [HomeBrew 工具安装](HomeBrew工具安装.md) — 装机一键清单
+
+## 开发语言
+
+- [jenv Java 版本管理](jenv%20Java%20版本管理.md) — 多 JDK 切换
+- [uv Python 包管理](uv%20Python%20包管理.md) — 极速 Python 包 / 项目管理
+- nvm（Node 版本管理）见 [HomeBrew 工具安装](HomeBrew工具安装.md)
 
 ## 编辑器
 
+- [neovim 与 LazyVim](neovim%20与%20LazyVim.md) — LazyVim 发行版
 - [Sublime Text 粘贴自动识别语法](Sublime%20Text%20粘贴自动识别语法.md)
