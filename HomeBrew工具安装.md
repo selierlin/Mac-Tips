@@ -45,6 +45,9 @@ brew install vivid
 # Node.js 版本管理
 brew install nvm
 
+# GitHub 命令行工具 - PR/Issue/Release 管理
+brew install gh
+
 # Web 服务器
 brew install nginx
 
@@ -125,7 +128,7 @@ brew install --cask orbstack
 
 ```bash
 # CLI 工具
-brew install bat btop htop fzf lsd eza ripgrep zoxide vivid nvm nginx thefuck tldr tmux trash zsh neofetch stow starship navi wails
+brew install bat btop htop fzf lsd eza ripgrep zoxide vivid nvm gh nginx thefuck tldr tmux trash zsh neofetch stow starship navi wails
 
 # GUI 应用
 brew install --cask ghostty iterm2 orbstack
@@ -140,6 +143,20 @@ brew install --cask ghostty iterm2 orbstack
 ```bash
 # 启用键盘快捷键
 $(brew --prefix)/opt/fzf/install
+```
+
+### gh
+
+```bash
+# 登录 GitHub 账户
+gh auth login
+
+# 常用命令
+gh pr create        # 创建 PR
+gh pr checkout 123  # 切换到 PR 分支
+gh pr list          # 列出 PR
+gh issue list       # 列出 Issue
+gh repo clone owner/repo  # 克隆仓库
 ```
 
 ### nvm
