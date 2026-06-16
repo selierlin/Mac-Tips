@@ -18,6 +18,7 @@
 ## CLI 工具
 
 - [fzf 模糊搜索](fzf%20模糊搜索.md) — 全能模糊搜索器
+- [atuin 历史搜索](atuin%20历史搜索.md) — shell 历史记录管理
 - [ripgrep 与 fd](ripgrep%20与%20fd.md) — 内容搜索 / 文件名查找
 - [eza 与 vivid](eza%20与%20vivid.md) — 现代 ls 与配色
 - [CLI 工具速查](CLI工具速查.md) — bat / thefuck / tldr / trash 等
