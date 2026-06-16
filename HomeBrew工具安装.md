@@ -1,4 +1,4 @@
-# HoneBrew 工具安装
+# HomeBrew 工具安装
 
 > 常用开发工具的 Homebrew 安装命令合集
 
@@ -45,14 +45,26 @@ brew install vivid
 # Node.js 版本管理
 brew install nvm
 
+# Java 版本管理 - 多 JDK 切换
+brew install jenv
+
+# Python 包管理 - 极速，替代 pip/venv
+brew install uv
+
 # GitHub 命令行工具 - PR/Issue/Release 管理
 brew install gh
 
 # Web 服务器
 brew install nginx
 
+# 编辑器 - Neovim（搭配 LazyVim）
+brew install neovim
+
 # 终端复用 - 分屏神器
 brew install tmux
+
+# 终端复用 - 现代款，开箱即用带键位提示
+brew install zellij
 ```
 
 ### 🌍 环境管理
@@ -73,6 +85,9 @@ brew install thefuck
 
 # Shell 提示符 - 快速、可定制
 brew install starship
+
+# 命令历史 - 替代 Ctrl+R，SQLite 存储 + 模糊搜索
+brew install atuin
 ```
 
 ### 📚 帮助文档
@@ -128,7 +143,7 @@ brew install --cask orbstack
 
 ```bash
 # CLI 工具
-brew install bat btop htop fzf lsd eza ripgrep zoxide vivid nvm gh nginx thefuck tldr tmux trash zsh neofetch stow starship navi wails
+brew install bat btop htop fzf lsd eza ripgrep zoxide vivid nvm jenv uv gh nginx neovim tmux zellij thefuck tldr atuin trash zsh neofetch stow starship navi wails
 
 # GUI 应用
 brew install --cask ghostty iterm2 orbstack
@@ -144,6 +159,8 @@ brew install --cask ghostty iterm2 orbstack
 # 启用键盘快捷键
 $(brew --prefix)/opt/fzf/install
 ```
+
+> 详见 [[fzf 模糊搜索]]。
 
 ### gh
 
