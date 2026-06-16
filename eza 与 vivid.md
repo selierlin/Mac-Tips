@@ -1,4 +1,6 @@
+# eza 与 vivid — 现代 ls 与配色方案
 
+> 用 **eza** 替代 ls、**vivid** 自动生成 LS_COLORS，告别手动维护几千字符的配色变量。
 
 ### 1. 核心工具选型 (The "Elegant" Stack)
 
