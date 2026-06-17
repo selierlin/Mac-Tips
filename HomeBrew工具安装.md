@@ -23,9 +23,6 @@ brew install bat
 # 模糊搜索 - Ctrl+R 历史搜索神器
 brew install fzf
 
-# ls 替代 - 图标 + 颜色
-brew install lsd
-
 # ls 替代 - 现代版，支持 Git 状态
 brew install eza
 
@@ -143,7 +140,7 @@ brew install --cask orbstack
 
 ```bash title=一键安装全部
 # CLI 工具
-brew install bat btop htop fzf lsd eza ripgrep zoxide vivid nvm jenv uv gh nginx neovim tmux zellij thefuck tldr atuin trash zsh neofetch stow starship navi wails
+brew install bat btop htop fzf eza ripgrep zoxide vivid nvm jenv uv gh nginx neovim tmux zellij thefuck tldr atuin trash zsh neofetch stow starship navi wails
 
 # GUI 应用
 brew install --cask ghostty iterm2 orbstack
