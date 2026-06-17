@@ -6,7 +6,7 @@
 
 ### 🖥️ 系统监控
 
-```bash
+```bash title=系统监控类
 # 进程监控 - 现代版 top，带图表
 brew install btop
 
@@ -16,7 +16,7 @@ brew install htop
 
 ### 🔍 文件与搜索
 
-```bash
+```bash title=文件与搜索类
 # cat 替代 - 语法高亮 + Git 集成
 brew install bat
 
@@ -41,7 +41,7 @@ brew install vivid
 
 ### 🛠️ 开发环境
 
-```bash
+```bash title=开发环境类
 # Node.js 版本管理
 brew install nvm
 
@@ -69,14 +69,14 @@ brew install zellij
 
 ### 🌍 环境管理
 
-```bash
+```bash title=环境管理类
 # 目录级环境变量自动切换
 brew install direnv
 ```
 
 ### 🐚 Shell 增强
 
-```bash
+```bash title=Shell 增强类
 # Zsh - 更强大的 shell
 brew install zsh
 
@@ -92,14 +92,14 @@ brew install atuin
 
 ### 📚 帮助文档
 
-```bash
+```bash title=帮助文档类
 # 简化版 man - 命令示例优先
 brew install tldr
 ```
 
 ### 🎨 实用工具
 
-```bash
+```bash title=实用工具类
 # 交互式 cheatsheet - 命令备忘录
 brew install navi
 
@@ -115,14 +115,14 @@ brew install stow
 
 ### 🎮 游戏/其他
 
-```bash
+```bash title=其他
 # Wails 应用构建工具
 brew install wails
 ```
 
 ### 🖥️ 终端模拟器
 
-```bash
+```bash title=终端模拟器（cask）
 # Ghostty - 现代 GPU 加速终端
 brew install --cask ghostty
 
@@ -132,7 +132,7 @@ brew install --cask iterm2
 
 ### 🐳 容器与虚拟化
 
-```bash
+```bash title=容器与虚拟化（cask）
 # OrbStack - 轻量级 Docker/Linux 容器
 brew install --cask orbstack
 ```
@@ -141,7 +141,7 @@ brew install --cask orbstack
 
 ## 🚀 一键安装全部
 
-```bash
+```bash title=一键安装全部
 # CLI 工具
 brew install bat btop htop fzf lsd eza ripgrep zoxide vivid nvm jenv uv gh nginx neovim tmux zellij thefuck tldr atuin trash zsh neofetch stow starship navi wails
 
@@ -155,7 +155,7 @@ brew install --cask ghostty iterm2 orbstack
 
 ### fzf
 
-```bash
+```bash title=启用 fzf 快捷键
 # 启用键盘快捷键
 $(brew --prefix)/opt/fzf/install
 ```
@@ -208,14 +208,14 @@ nvm uninstall 18          # 卸载某版本
 
 ### thefuck
 
-```bash
+```bash title=~/.zshrc - thefuck
 # 添加到 ~/.zshrc
 eval $(thefuck --alias)
 ```
 
 ### zsh
 
-```bash
+```bash title=设 zsh 为默认 shell
 # 设为默认 shell
 chsh -s $(which zsh)
 ```
@@ -236,7 +236,7 @@ starship preset nerd-font-symbols > ~/.config/starship.toml     # 导出预设�
 
 ### zoxide
 
-```bash
+```bash title=~/.zshrc - zoxide 集成
 # 添加到 ~/.zshrc
 eval "$(zoxide init zsh)"
 ```
@@ -245,7 +245,7 @@ eval "$(zoxide init zsh)"
 
 ### direnv
 
-```bash
+```bash title=~/.zshrc - direnv
 # 添加到 ~/.zshrc
 eval "$(direnv hook zsh)"
 
@@ -258,7 +258,7 @@ direnv allow
 
 ### vivid
 
-```bash
+```bash title=~/.zshrc - vivid 配色
 # 添加到 ~/.zshrc
 export LS_COLORS="$(vivid generate molokai)"
 ```

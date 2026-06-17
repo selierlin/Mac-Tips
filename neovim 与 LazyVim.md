@@ -18,7 +18,7 @@ brew install neovim
 
 ## 配置结构
 
-```
+```text title=LazyVim 配置目录结构
 ~/.config/nvim/
 ├── init.lua          # 入口（加载 lua/ 下的配置）
 ├── lazyvim.json      # LazyVim 自身配置（extras 开关等）

@@ -22,7 +22,7 @@
 1. `Cmd+Shift+P` → `AutoSetSyntax: Download Dependencies`（约 15~25 MB）
 2. `Preferences` → `Package Settings` → `AutoSetSyntax` → `Settings`，添加：
 
-```json
+```json title=AutoSetSyntax 启用 Magika
 {
     "magika.enabled": true
 }

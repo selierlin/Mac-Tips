@@ -176,7 +176,7 @@
 #### 启动台图标大小
 
 - 打开终端，复制并执行以下4行命令：
-```shell
+```shell title=调整启动台图标大小
 defaults write com.apple.dock springboard-rows -int 6
 defaults write com.apple.dock springboard-columns -int 9
 defaults write com.apple.dock ResetLaunchPad -bool TRUE
@@ -190,7 +190,7 @@ killall Dock
 4. 重启Dock
 
 - 还原
-```shell
+```shell title=还原启动台默认布局
 defaults write com.apple.dock springboard-rows Default
 defaults write com.apple.dock springboard-columns Default
 defaults write com.apple.dock ResetLaunchPad -bool TRUE

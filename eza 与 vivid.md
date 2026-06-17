@@ -13,7 +13,7 @@
 
 打开终端，直接通过 Homebrew 一键安装这“全家桶”：
 
-```bash
+```bash title=安装 eza 与 vivid
 brew install eza vivid
 ```
 
@@ -23,7 +23,7 @@ brew install eza vivid
 清理掉你之前关于 `LS_COLORS` 的所有混乱代码，只需在 `~/.zshrc` 中加入这几行：
 
 
-```zsh
+```zsh title=~/.zshrc - eza 别名与 vivid 配色
 # 1. 使用 vivid 自动生成配色（推荐 molokai 或 catppuccin 方案，非常优雅）
 export LS_COLORS="$(vivid generate catppuccin-macchiato)"
 
@@ -70,7 +70,7 @@ eval "$(starship init zsh)"
 
 #### 查看所有可用主题
 
-```shell
+```shell title=查看 vivid 所有主题
 vivid themes
 ```
 
@@ -78,7 +78,7 @@ vivid themes
 
 这是一个非常实用的命令，它会循环展示所有主题的效果，帮你快速定夺：
 
-```python
+```python title=循环预览所有主题效果
 for theme in $(vivid themes); do
     echo "--- Theme: $theme ---"
     LS_COLORS=$(vivid generate $theme) ll
@@ -92,7 +92,7 @@ done
 
 在你的 `~/.zshrc` 中，**不要**写死那一长串字符串，而是利用 `vivid` 的动态生成能力：
 
-```
+```bash title=~/.zshrc - vivid 动态配色
 # 在 .zshrc 中添加这一行
 # 这样你以后想换主题，只需要改一下这里的名字即可
 export LS_COLORS="$(vivid generate catppuccin-macchiato)"
@@ -115,4 +115,3 @@ alias ls='eza --icons --group-directories-first'
 | **`--time-style=long-iso`**     | **标准时间格式** | 统一显示为 `2026-03-22 12:10`。比系统默认那种乱跳的格式整齐得多。          |
 | **`--header`**                  | **表头显示**   | 在顶部增加一行标题（Name, Size, Date...），让终端瞬间像个正经的表格。        |
 | **`--color-scale`**             | **色彩刻度**   | 根据文件大小动态着色。**大文件颜色更深更亮**，帮你一眼揪出占空间的大户。              |
-

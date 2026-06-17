@@ -3,14 +3,14 @@
 **终端复用神器** - 保持会话持久化，实现多窗口/面板管理，彻底摆脱终端标签混乱
 
 ## 🔧 安装与基础配置
-```bash
+```bash title=安装 tmux
 brew install tmux  # macOS 安装
 sudo apt install tmux  # Ubuntu/Debian
 ```
 
 **基础配置文件 (`~/.tmux.conf`)**
 
-```bash
+```bash title=~/.tmux.conf 基础配置
 # =============================================
 # 1. 基础全局设置 (通用性与性能)
 # =============================================
@@ -114,7 +114,7 @@ setw -g window-status-current-style fg=black,bg=cyan,bold
 
 ### 1. 会话管理
 
-```bash
+```bash title=会话管理命令
 tmux new -s work         # 创建名为 work 的会话
 tmux ls                  # 列出所有会话
 tmux attach -t work      # 重新接入会话
@@ -127,13 +127,13 @@ tmux kill-session -t work # 终止指定会话
 
 1. 安装插件管理器：
 
-```bash
+```bash title=安装 tpm 插件管理器
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 2. 在 `~/.tmux.conf` 添加：
 
-```bash
+```bash title=~/.tmux.conf - 声明插件
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 run '~/.tmux/plugins/tpm/tpm'
@@ -150,14 +150,14 @@ run '~/.tmux/plugins/tpm/tpm'
     `前缀键 + :` 进入命令模式，输入 `setw synchronize-panes`
 - **面板布局预设**：
 
-```bash
+```bash title=面板布局预设
 tmux select-layout even-horizontal  # 水平等分
 tmux select-layout tiled            # 自动平铺
 ```
 
 - **批量操作窗口**：
 
-```bash
+```bash title=跨会话链接窗口
 tmux link-window -s dev:2 -t work:3  # 将 dev 会话的窗口2链接到 work 会话窗口3
 ```
 
@@ -167,13 +167,13 @@ tmux link-window -s dev:2 -t work:3  # 将 dev 会话的窗口2链接到 work �
 
 1. 安装 `reattach-to-user-namespace`：
 
-```bash
+```bash title=安装剪贴板桥接工具
 brew install reattach-to-user-namespace
 ```
     
 2. 在 `~/.tmux.conf` 添加：
 
-```bash
+```bash title=~/.tmux.conf - 剪贴板集成
 set-option -g default-command "reattach-to-user-namespace -l zsh"
 ```
 
@@ -181,7 +181,7 @@ set-option -g default-command "reattach-to-user-namespace -l zsh"
 
 结合 fzf 实现智能切换：
 
-```bash
+```bash title=~/.tmux.conf - fzf 切换会话
 # 绑定快捷键：前缀键 + s 选择会话
 bind-key s run-shell "tmux list-sessions | sed -E 's/:.*$//' | fzf --height 40% | xargs tmux switch-client -t"
 ```
@@ -190,7 +190,7 @@ bind-key s run-shell "tmux list-sessions | sed -E 's/:.*$//' | fzf --height 40% 
 
 创建系统监控面板：
 
-```bash
+```bash title=搭建系统监控面板
 tmux new-window -n "Monitor"
 tmux split-window -h "glances"
 tmux split-window -v "htop"
@@ -201,7 +201,7 @@ tmux select-pane -t 0
 
 **Web 开发环境搭建**：
 
-```bash
+```bash title=Web 开发环境一键搭建
 tmux new -s webdev
 tmux rename-window 'Server'
 tmux send-keys 'npm run dev' C-m  # 自动运行命令
