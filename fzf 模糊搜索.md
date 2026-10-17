@@ -39,5 +39,5 @@ $(brew --prefix)/opt/fzf/install
 ## 联动玩法
 
 - 结合 ripgrep 找文件并交给 fzf 交互筛选，详见 [[CLI工具速查]] 的联动示例。
-- 在 tmux 中用 fzf 模糊切换会话/窗口，详见 [[tmux 终极指南]]。
+- 在 tmux 中用 fzf 模糊切换会话/窗口，详见 [[终端复用器指南]]。
 - shell **命令历史**搜索用 [[atuin 历史搜索]] 专门管理（替代原生 Ctrl+R，自带 TUI）。

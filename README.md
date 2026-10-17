@@ -13,8 +13,7 @@
 ## 终端环境
 
 - [终端环境搭建](终端环境搭建.md) — zsh / oh-my-zsh / iTerm2 / 字体 / 配色 一条龙
-- [tmux 终极指南](tmux%20终极指南.md) — 终端复用神器
-- [zellij 终端复用](zellij%20终端复用.md) — 现代终端复用器（tmux 替代）
+- [终端复用器指南](终端复用器指南.md) — tmux / zellij / cmux / herdr 整合
 
 ## CLI 工具
 

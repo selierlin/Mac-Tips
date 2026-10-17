@@ -83,7 +83,7 @@ atuin import auto   # 自动识别 zsh/bash/fish 历史并导入
 ## 与其他工具的关系
 
 - 与 [[fzf 模糊搜索]]：atuin 的 `Ctrl+R` 用**自带 TUI**（非 fzf）。fzf 仍负责文件/通用模糊搜索，二者互补不冲突。
-- 在 tmux 中可启用 popup 搜索，详见 [[tmux 终极指南]]。
+- 在 tmux 中可启用 popup 搜索，详见 [[终端复用器指南]]。
 - 集成入口写在 [[终端环境搭建]] 的 zsh 配置中。
 
 ## 参考
