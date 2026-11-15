@@ -35,3 +35,10 @@
 
 - [neovim 与 LazyVim](neovim%20与%20LazyVim.md) — LazyVim 发行版
 - [Sublime Text 粘贴自动识别语法](Sublime%20Text%20粘贴自动识别语法.md)
+
+## 在线站点
+
+- 站点地址：<https://selierlin.github.io/Mac-Tips/>
+- 源码在 [`web/`](web) 目录：Vite + React + Tailwind，直接读取根目录的 Markdown 渲染，改文档即改站点
+- 本地预览：`cd web && npm install && npm run dev`
+- 推送到 `main` 后由 GitHub Actions 自动构建并发布

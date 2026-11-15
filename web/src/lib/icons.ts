@@ -1,0 +1,40 @@
+import {
+  AppWindow,
+  Box,
+  Coffee,
+  Command,
+  FileCode2,
+  FileSearch,
+  FileText,
+  FolderTree,
+  History,
+  Package,
+  Palette,
+  PanelsTopLeft,
+  PenLine,
+  Search,
+  SquareTerminal,
+  Terminal,
+  type LucideIcon,
+} from 'lucide-react'
+
+export const docIcons: Record<string, LucideIcon> = {
+  'app-window': AppWindow,
+  terminal: Terminal,
+  panels: PanelsTopLeft,
+  search: Search,
+  history: History,
+  'file-search': FileSearch,
+  palette: Palette,
+  'folder-tree': FolderTree,
+  'square-terminal': SquareTerminal,
+  package: Package,
+  coffee: Coffee,
+  box: Box,
+  'file-code': FileCode2,
+  'pen-line': PenLine,
+  command: Command,
+  'file-text': FileText,
+}
+
+export const REPO_URL = 'https://github.com/selierlin/Mac-Tips'
