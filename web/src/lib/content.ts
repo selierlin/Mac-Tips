@@ -10,9 +10,10 @@ const docGlob = import.meta.glob('../../../*.md', {
 }) as Record<string, string>
 
 const iconGlob = {
+  // 工具图标页面上只显示 46–56px，构建时统一压到 128px webp，原始 9.6MB → 约 300KB
   ...(import.meta.glob('../../../Mac工具推荐.assets/**/*', {
     eager: true,
-    query: '?url',
+    query: '?w=128&format=webp&quality=82&withoutEnlargement=true',
     import: 'default',
   }) as Record<string, string>),
   ...(import.meta.glob('../../../assets/**/*', {
@@ -25,8 +26,9 @@ const iconGlob = {
 /** 文件名统一小写做键：md 里写的 `Input Source Pro.jpg` 与磁盘上的 `input source pro.jpg` 大小写不一致 */
 const assetByName = new Map<string, string>()
 for (const [path, url] of Object.entries(iconGlob)) {
-  if (typeof url !== 'string' || !/\.(png|jpe?g|gif|svg|webp)$/i.test(path)) continue
-  const name = path.split('/').pop()!.toLowerCase()
+  const file = path.split('?')[0]
+  if (typeof url !== 'string' || !/\.(png|jpe?g|gif|svg|webp)$/i.test(file)) continue
+  const name = file.split('/').pop()!.toLowerCase()
   if (!assetByName.has(name)) assetByName.set(name, url)
 }
 
