@@ -31,7 +31,7 @@ export function ToolsView() {
   const [active, setActive] = useState('全部')
 
   const list = useMemo(
-    () => (active === '全部' ? tools : tools.filter((t) => t.category === active)),
+    () => (active === '全部' ? tools : tools.filter((t) => t.categories.includes(active))),
     [active],
   )
 
@@ -54,7 +54,7 @@ export function ToolsView() {
       <div className="no-scrollbar fade-right sticky top-0 z-10 -mx-2 mt-5 flex gap-1.5 overflow-x-auto bg-[#121216]/80 px-2 py-2 pr-10 backdrop-blur-md">
         {['全部', ...toolCategories].map((c) => {
           const on = active === c
-          const count = c === '全部' ? tools.length : tools.filter((t) => t.category === c).length
+          const count = c === '全部' ? tools.length : tools.filter((t) => t.categories.includes(c)).length
           return (
             <button
               key={c}
@@ -84,7 +84,7 @@ export function ToolsView() {
         <AnimatePresence mode="popLayout">
           {list.map((t) => (
             <motion.a
-              key={t.category + t.name}
+              key={t.name}
               layout
               initial={{ opacity: 0, scale: 0.94 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -95,13 +95,15 @@ export function ToolsView() {
               target="_blank"
               rel="noreferrer"
               className="group relative flex flex-col items-center gap-2.5 rounded-2xl border border-white/[0.07] bg-white/[0.035] px-2 py-3.5 transition-colors hover:border-white/20 hover:bg-white/[0.07] hover:shadow-[0_16px_40px_-16px_rgba(0,0,0,0.8)]"
-              title={t.category}
+              title={t.categories.join(' / ')}
             >
               <IconTile tool={t} size="h-12 w-12" />
               <span className="w-full truncate text-center text-[11.5px] text-white/70 group-hover:text-white">
                 {t.name}
               </span>
-              <span className="w-full truncate text-center text-[10px] text-white/28">{t.category}</span>
+              <span className="w-full truncate text-center text-[10px] text-white/28">
+                {t.categories.join(' / ')}
+              </span>
               {t.featured && (
                 <Star className="absolute right-2 top-2 h-3 w-3 fill-amber-300 text-amber-300 opacity-80" />
               )}

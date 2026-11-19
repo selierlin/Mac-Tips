@@ -165,14 +165,19 @@ export interface Tool {
   name: string
   url: string
   icon?: string
+  /** 主分类：表格中第一次出现的位置，卡片上显示它 */
   category: string
+  /** 全部所属分类：同一工具可以写在多行，如 Baton 同时覆盖截图、OCR、剪贴板 */
+  categories: string[]
   featured: boolean
 }
 
+type RawTool = Omit<Tool, 'categories'>
+
 const TOOL_SRC = rawDocs.get('Mac工具推荐') ?? ''
 
-function parseTools(md: string): Tool[] {
-  const tools: Tool[] = []
+function parseTools(md: string): RawTool[] {
+  const tools: RawTool[] = []
   for (const line of md.split('\n')) {
     if (!line.trim().startsWith('|')) continue
     const cells = line.split('|').map((c) => c.trim())
@@ -206,8 +211,28 @@ function parseTools(md: string): Tool[] {
   return tools
 }
 
-export const tools = parseTools(TOOL_SRC)
-export const toolCategories = [...new Set(tools.map((t) => t.category))]
+/** 写进多个分类行的工具合并成一条，分类取并集，避免列表与搜索里出现重复卡片 */
+function mergeTools(list: RawTool[]): Tool[] {
+  const merged = new Map<string, Tool>()
+  for (const raw of list) {
+    const key = raw.name + '|' + raw.url
+    const hit = merged.get(key)
+    if (!hit) {
+      merged.set(key, { ...raw, categories: [raw.category] })
+      continue
+    }
+    if (!hit.categories.includes(raw.category)) hit.categories.push(raw.category)
+    hit.featured ||= raw.featured
+    hit.icon ||= raw.icon
+  }
+  return [...merged.values()]
+}
+
+const rawTools = parseTools(TOOL_SRC)
+
+export const tools = mergeTools(rawTools)
+/** 分类顺序沿用表格行序 */
+export const toolCategories = [...new Set(rawTools.map((t) => t.category))]
 export const featuredTools = tools.filter((t) => t.featured)
 
 /* ------------------------------ 快捷键 ------------------------------ */
@@ -322,7 +347,7 @@ export const searchIndex: SearchItem[] = [
   ...tools.map((t) => ({
     id: `tool:${t.name}`,
     title: t.name,
-    subtitle: t.category,
+    subtitle: t.categories.join(' / '),
     kind: '工具' as const,
     icon: t.icon,
     url: t.url,
